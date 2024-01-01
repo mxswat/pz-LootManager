@@ -2,7 +2,7 @@ if isClient() then return end
 
 local MxDebug = require "MxUtilities/MxDebug"
 
-local LootManagerModData = require "LootManager/LootManagerModData"
+local LootManagerGlobalModData = require "LootManager/LootManagerGlobalModData"
 
 local LootManagerCommands = {};
 
@@ -24,15 +24,15 @@ function LootManagerCommands.EnableLootManager(source, cords)
   if not object then return end
 
   local spriteName = LootManagerCommands.getOppositeStateSpriteName(object:getSprite():getName())
-  -- object:setSprite(spriteName) -- this only changes the square tile estetics, not the actual object, good to know
-  local square = object:getSquare()
-  square:transmitRemoveItemFromSquare(object)
+  object:setSprite(spriteName) -- this only changes the square tile estetics, not the actual object, good to know
 
-  ISBrushToolTileCursor:create(square:getX(), square:getY(), square:getZ(), nil, spriteName)
+  local square = object:getSquare()
+
+  -- ISBrushToolTileCursor:create(square:getX(), square:getY(), square:getZ(), nil, spriteName)
 
   local id = table.concat({ square:getX(), square:getY(), square:getZ(), cords.objectIndex }, '_')
 
-  LootManagerModData:get().managers[id] = cords
+  LootManagerGlobalModData:get().managers[id] = cords
 end
 
 local onClientCommand = function(module, command, source, args)
