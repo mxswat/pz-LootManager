@@ -1,0 +1,8 @@
+version=1
+title=Loot Manager
+tags=Build 41
+visibility=public
+description=[h1]Loot Manager[/h1]
+description=
+description=Mod under development...
+description=

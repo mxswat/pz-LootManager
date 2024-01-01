@@ -1,0 +1,6 @@
+id=LootManager
+name=Loot Manager
+poster=poster.png
+icon=icon.png
+require=MxUtilities
+tiledef=lootmanager_tile_def 13121
