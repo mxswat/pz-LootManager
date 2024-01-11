@@ -17,3 +17,8 @@
 -- local PRIORITY = 5
 -- MapObjects.OnNewWithSprite("loot_manager_0", LootManagerSystem.onNewLootManager, PRIORITY)
 -- MapObjects.OnLoadWithSprite("loot_manager_0", LootManagerSystem.onLoadLootManager, PRIORITY)
+
+-- media\lua\server\Camping\SCampfireGlobalObject.lua
+-- media\lua\server\Map\MapObjects\MOCampfire.lua
+-- media\lua\server\Camping\SCampfireSystem.lua
+-- media\lua\server\Camping\SCampfireSystemCommands.lua
