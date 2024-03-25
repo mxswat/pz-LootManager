@@ -1,1 +1,2 @@
 cell:getMaxZ()
+ISInventoryTransferAction:transferItem(item)
